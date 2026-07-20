@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>i28.io</title>
+<meta name="description" content="i28.io">
+<meta name="theme-color" content="#0b0710">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0710'/><text x='16' y='23' font-family='monospace' font-size='20' fill='%23ff2bd6' text-anchor='middle'>i</text></svg>">
+<style>
+  :root {
+    --bg: #0b0710;
+    --magenta: #ff2bd6;
+    --magenta-dim: #a3178a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    background: var(--bg);
+    background-image: radial-gradient(ellipse at 50% 45%, #1d0a22 0%, var(--bg) 70%);
+    color: var(--magenta);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  /* The art is 26 columns wide; a monospace glyph is ~0.6em, so 26ch ~= 15.6em.
+     Scaling font-size with vw keeps it on one line at any width. */
+  pre {
+    margin: 0;
+    font: inherit;
+    font-size: clamp(0.5rem, 5vw, 1.65rem);
+    line-height: 1.12;
+    white-space: pre;
+    text-shadow:
+      0 0 0.35em rgba(255, 43, 214, 0.55),
+      0 0 1.4em rgba(255, 43, 214, 0.25);
+  }
+
+  .cursor {
+    display: block;
+    width: 0.62em;
+    height: 1.15em;
+    font-size: clamp(0.7rem, 2.4vw, 1rem);
+    background: var(--magenta);
+    box-shadow: 0 0 0.7em rgba(255, 43, 214, 0.6);
+    animation: blink 1.15s steps(1, end) infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cursor { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);">i28.io</h1>
+    <pre aria-hidden="true">    _ ___   ____    _
+   (_)__ \ ( __ )  (_)___
+  / /__/ // __  | / / __ \
+ / // __// /_/ / / / /_/ /
+/_//____/\____(_)_/\____/ </pre>
+    <span class="cursor" aria-hidden="true"></span>
+  </main>
+</body>
+</html>

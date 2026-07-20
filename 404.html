@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 &middot; i28.io</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b0710">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0710'/><text x='16' y='23' font-family='monospace' font-size='20' fill='%23ff2bd6' text-anchor='middle'>i</text></svg>">
+<style>
+  :root {
+    --bg: #0b0710;
+    --magenta: #ff2bd6;
+    --magenta-dim: #a3178a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    background: var(--bg);
+    background-image: radial-gradient(ellipse at 50% 45%, #1d0a22 0%, var(--bg) 70%);
+    color: var(--magenta);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  pre {
+    margin: 0;
+    font: inherit;
+    font-size: clamp(0.6rem, 6vw, 2rem);
+    line-height: 1.12;
+    white-space: pre;
+    text-shadow:
+      0 0 0.35em rgba(255, 43, 214, 0.55),
+      0 0 1.4em rgba(255, 43, 214, 0.25);
+  }
+
+  a {
+    color: var(--magenta);
+    font-size: clamp(0.75rem, 2.6vw, 0.95rem);
+    letter-spacing: 0.08em;
+    text-decoration-color: var(--magenta-dim);
+    text-underline-offset: 0.35em;
+  }
+
+  a:hover, a:focus-visible {
+    text-decoration-color: var(--magenta);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);">404 — page not found</h1>
+    <pre aria-hidden="true">   __ __  ____  __ __
+  / // / / __ \/ // /
+ / // /_/ / / / // /_
+/__  __/ /_/ /__  __/
+  /_/  \____/  /_/  </pre>
+    <a href="/">&lt; back to i28.io</a>
+  </main>
+</body>
+</html>
