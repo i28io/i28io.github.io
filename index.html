@@ -38,17 +38,17 @@
     gap: 1.75rem;
   }
 
-  /* The art is 26 columns wide; a monospace glyph is ~0.6em, so 26ch ~= 15.6em.
-     Scaling font-size with vw keeps it on one line at any width. */
+  /* The art is 23 columns wide; a monospace glyph is ~0.6em, so 23ch ~= 13.8em.
+     Scaling font-size with vw keeps it on one line at any width.
+     line-height must stay at 1 — anything looser breaks the figlet strokes
+     between rows, and a heavy glow blurs the 1px strokes into each other. */
   pre {
     margin: 0;
     font: inherit;
-    font-size: clamp(0.5rem, 5vw, 1.65rem);
-    line-height: 1.12;
+    font-size: clamp(0.5rem, 5.6vw, 1.75rem);
+    line-height: 1;
     white-space: pre;
-    text-shadow:
-      0 0 0.35em rgba(255, 43, 214, 0.55),
-      0 0 1.4em rgba(255, 43, 214, 0.25);
+    text-shadow: 0 0 0.5em rgba(255, 43, 214, 0.35);
   }
 
   .cursor {
@@ -73,11 +73,11 @@
 <body>
   <main>
     <h1 class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);">i28.io</h1>
-    <pre aria-hidden="true">    _ ___   ____    _
-   (_)__ \ ( __ )  (_)___
-  / /__/ // __  | / / __ \
- / // __// /_/ / / / /_/ /
-/_//____/\____(_)_/\____/ </pre>
+    <pre aria-hidden="true"> _ ____  ___   _
+(_)___ \( _ ) (_) ___
+| | __) / _ \ | |/ _ \
+| |/ __/ (_) || | (_) |
+|_|_____\___(_)_|\___/</pre>
     <span class="cursor" aria-hidden="true"></span>
   </main>
 </body>

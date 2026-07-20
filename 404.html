@@ -38,15 +38,14 @@
     gap: 1.75rem;
   }
 
+  /* 21 columns wide. See index.html — line-height must stay at 1. */
   pre {
     margin: 0;
     font: inherit;
-    font-size: clamp(0.6rem, 6vw, 2rem);
-    line-height: 1.12;
+    font-size: clamp(0.6rem, 6.1vw, 2rem);
+    line-height: 1;
     white-space: pre;
-    text-shadow:
-      0 0 0.35em rgba(255, 43, 214, 0.55),
-      0 0 1.4em rgba(255, 43, 214, 0.25);
+    text-shadow: 0 0 0.5em rgba(255, 43, 214, 0.35);
   }
 
   a {
@@ -65,11 +64,11 @@
 <body>
   <main>
     <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);">404 — page not found</h1>
-    <pre aria-hidden="true">   __ __  ____  __ __
-  / // / / __ \/ // /
- / // /_/ / / / // /_
-/__  __/ /_/ /__  __/
-  /_/  \____/  /_/  </pre>
+    <pre aria-hidden="true"> _  _    ___  _  _
+| || |  / _ \| || |
+| || |_| | | | || |_
+|__   _| |_| |__   _|
+   |_|  \___/   |_|</pre>
     <a href="/">&lt; back to i28.io</a>
   </main>
 </body>
